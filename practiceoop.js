@@ -1,15 +1,18 @@
 function testOOP(){
 
 let protoAni = {
-    speak(sound){
-        document.getElementById("output").innerHTML = (`The ${this.animal} says '${sound}'`);
+    speak(){
+        document.getElementById("output").innerHTML += (`The ${this.animal} says ${this.sound} <br />`);
     }
-
 }
 
 let shepherdDog = Object.create(protoAni);
-shepherdDog.animal = "White Shepherd";
-shepherdDog.speak("WOOF WOOF!");
+shepherdDog.animal = "Shepherd Dog";
+shepherdDog.sound = "WOOF WOOF!";
+shepherdDog.speak();
 
-console.log (protoDog);
+let tinyBunny = Object.create(protoAni);
+tinyBunny.animal = "Tiny bunny";
+tinyBunny.sound="gimme carrots!";
+
 }
