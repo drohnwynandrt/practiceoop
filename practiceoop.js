@@ -1,8 +1,10 @@
 window.onload=aniSum();
 
+var protoAni;
+
 function aniSum(){
 
-let protoAni = {
+ protoAni = {
     actiAni(){
         document.getElementById(this.id).innerHTML += (`This is the ${this.animal}. `);
     },
@@ -34,4 +36,21 @@ tinyBunny.actiAni();
 tinyBunny.foodAni();
 tinyBunny.forestAni();
 
+}
+
+function makeAniArr(){
+let aniArr = [];
+
+
+let i;
+
+for (let i=0; i<50; i++){
+    let ani = Object.create (protoAni);
+
+    ani.id="tinyBunny"+i;
+
+    aniArr.push(ani);
+}
+console.log(aniArr);
+console.log(i);
 }
