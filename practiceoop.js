@@ -1,25 +1,26 @@
-function testOOP(){
+window.onload=aniSum();
+
+function aniSum(){
 
 let protoAni = {
     actiAni(){
-        document.getElementById(this.id).innerHTML += (`This is the ${this.animal}.`);
+        document.getElementById(this.id).innerHTML += (`This is the ${this.animal}. `);
     },
-    eatAni(){
-        document.getElementById(this.id).innerHTML += (`The ${this.animal} eats ${this.food}.`);
+    foodAni(){
+        document.getElementById(this.id).innerHTML += (`The ${this.animal} eats ${this.food}. `);
     },
     forestAni(){
-        document.getElementById(this.id).innerHTML += (`The ${this.animal} lives in the forest.`);
+        document.getElementById(this.id).innerHTML += (`The ${this.animal} lives in the forest. `);
     },
     huntAni(){
-        document.getElementById(this.id).innerHTML += (`The ${this.animal} hunts for his food.`);
+        document.getElementById(this.id).innerHTML += (`The ${this.animal} hunts for his food. `);
     }
 }
 
 let shepherdDog = Object.create(protoAni);
 shepherdDog.id="shepherdDog";
 shepherdDog.animal = "Shepherd Dog";
-shepherdDog.sound = "WOOF WOOF!";
-shepherdDog.food="Tiny Bunny";
+shepherdDog.food="small prey animals such as tiny bunnies";
 shepherdDog.actiAni();
 shepherdDog.foodAni();
 shepherdDog.forestAni();
