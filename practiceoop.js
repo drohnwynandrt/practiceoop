@@ -1,7 +1,28 @@
+var allAni=[];
+class dog {
+    constructor(type){
+        this.type=type;
+    }
+}
+
+
+
+function makeAniArr(){
+let i;
+let whiteShepherdDog = new dog("white shepherd");
+
+for (let i=0; i<50; i++){
+    allAni.push(whiteShepherdDog);
+    whiteShepherdDog.breed="shepherd"
+    whiteShepherdDog.color="white";
+}
+console.log(allAni);
+
+}
+
+/*
+
 window.onload=aniSum();
-
-var protoAni;
-
 function aniSum(){
 
  protoAni = {
@@ -38,19 +59,4 @@ tinyBunny.forestAni();
 
 }
 
-function makeAniArr(){
-let aniArr = [];
-
-
-let i;
-
-for (let i=0; i<50; i++){
-    let ani = Object.create (protoAni);
-
-    ani.id="tinyBunny"+i;
-
-    aniArr.push(ani);
-}
-console.log(aniArr);
-console.log(i);
-}
+*/
