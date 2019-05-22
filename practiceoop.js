@@ -2,6 +2,8 @@ var allAni=[];
 class dog {
     constructor(type){
         this.type=type;
+        this.color="various";
+
     }
 }
 
@@ -9,12 +11,17 @@ class dog {
 
 function makeAniArr(){
 let i;
-let whiteShepherdDog = new dog("white shepherd");
 
 for (let i=0; i<50; i++){
+    let whiteShepherdDog = new dog("white shepherd");
     allAni.push(whiteShepherdDog);
     whiteShepherdDog.breed="shepherd"
     whiteShepherdDog.color="white";
+}
+for (let i=0; i<50; i++){
+    let whiteShepherdDog = new dog("white shepherd");
+    allAni.push(whiteShepherdDog);
+    whiteShepherdDog.breed="shepherd"
 }
 console.log(allAni);
 
